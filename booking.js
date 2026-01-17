@@ -1,0 +1,188 @@
+const TELEGRAM = {
+  token: "PUT_TELEGRAM_BOT_TOKEN_HERE",
+  chatId: "PUT_TELEGRAM_CHAT_ID_HERE"
+};
+
+function buildMessage(data){
+  const lines = [
+    "Bahçe Restoran — Booking",
+    "",
+    `Name: ${data.name || "-"}`,
+    `Phone: ${data.phone || "-"}`,
+    `Date: ${data.date || "-"}`,
+    `Time: ${data.time || "-"}`,
+    `Guests: ${data.guests || "-"}`,
+    `Message: ${data.message || "-"}`
+  ];
+  return lines.join("\n");
+}
+
+async function sendToTelegram(text){
+  const { token, chatId } = TELEGRAM;
+  if(!token || token.includes("PUT_TELEGRAM_BOT_TOKEN_HERE")){
+    throw new Error("Telegram token is not set");
+  }
+  if(!chatId || chatId.includes("PUT_TELEGRAM_CHAT_ID_HERE")){
+    throw new Error("Telegram chat_id is not set");
+  }
+
+  const url = `https://api.telegram.org/bot${token}/sendMessage`;
+  const res = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      chat_id: chatId,
+      text,
+      disable_web_page_preview: true
+    })
+  });
+
+  if(!res.ok){
+    const t = await res.text().catch(()=>"");
+    throw new Error(t || `Telegram error: ${res.status}`);
+  }
+}
+
+function getT(key){
+  const lang = getLang();
+  const dict = (window.I18N && window.I18N[lang]) ? window.I18N[lang] : (window.I18N ? window.I18N.az : null);
+  return (dict && typeof dict[key] === "string") ? dict[key] : "";
+}
+
+function showNotice(kind, text){
+  const el = document.getElementById("formNotice");
+  if(!el) return;
+  el.style.display = "block";
+  el.classList.remove("ok","err");
+  el.classList.add(kind);
+  el.textContent = text;
+}
+
+function setLoading(isLoading){
+  const btn = document.getElementById("submitBtn");
+  if(!btn) return;
+  btn.disabled = isLoading;
+  btn.style.opacity = isLoading ? "0.7" : "1";
+}
+
+function sanitizePhone(v){
+  let s = String(v || "");
+  s = s.replace(/[^0-9+]/g, "");
+  s = s.replace(/\++/g, "+");
+  if(s.includes("+")){
+    s = "+" + s.replace(/\+/g, "");
+  }
+  return s;
+}
+
+function sanitizeDigits(v){
+  return String(v || "").replace(/\D/g, "");
+}
+
+function getLang(){
+  return localStorage.getItem("lang") || "az";
+}
+
+function initPickers(form){
+  if(typeof window.flatpickr !== "function") return;
+
+  const dateInput = form.querySelector("input[name='date']");
+  if(dateInput){
+    dateInput.setAttribute("readonly", "readonly");
+    window.flatpickr(dateInput, {
+      dateFormat: "Y-m-d",
+      altInput: true,
+      altFormat: "d.m.Y",
+      allowInput: false
+    });
+  }
+}
+
+function pad2(n){
+  return String(n).padStart(2, "0");
+}
+
+function buildTimeOptions(){
+  const out = [];
+  for(let h = 10; h <= 22; h++){
+    for(let m = 0; m < 60; m += 15){
+      if(h === 22 && m > 0) break;
+      out.push(`${pad2(h)}:${pad2(m)}`);
+    }
+  }
+  return out;
+}
+
+function initTimeSelect(form){
+  const sel = form.querySelector("select[name='time']");
+  if(!sel) return;
+  sel.innerHTML = "";
+
+  const placeholder = document.createElement("option");
+  placeholder.value = "";
+  placeholder.textContent = "";
+  placeholder.selected = true;
+  sel.appendChild(placeholder);
+
+  buildTimeOptions().forEach((t)=>{
+    const opt = document.createElement("option");
+    opt.value = t;
+    opt.textContent = t;
+    sel.appendChild(opt);
+  });
+}
+
+function initBooking(){
+  const form = document.getElementById("bookingForm");
+  if(!form) return;
+
+  initPickers(form);
+  initTimeSelect(form);
+
+  const phoneInput = form.querySelector("input[name='phone']");
+  const guestsInput = form.querySelector("input[name='guests']");
+
+  phoneInput?.addEventListener("input", ()=>{
+    const next = sanitizePhone(phoneInput.value);
+    if(next !== phoneInput.value) phoneInput.value = next;
+  });
+
+  guestsInput?.addEventListener("input", ()=>{
+    const next = sanitizeDigits(guestsInput.value);
+    if(next !== guestsInput.value) guestsInput.value = next;
+  });
+
+  form.addEventListener("submit", async (e)=>{
+    e.preventDefault();
+
+    const fd = new FormData(form);
+    const payload = {
+      name: String(fd.get("name") || "").trim(),
+      phone: sanitizePhone(String(fd.get("phone") || "").trim()),
+      date: String(fd.get("date") || "").trim(),
+      time: String(fd.get("time") || "").trim(),
+      guests: sanitizeDigits(String(fd.get("guests") || "").trim()),
+      message: String(fd.get("message") || "").trim()
+    };
+
+    if(!payload.phone){
+      showNotice("err", getT("err_required") || "Phone is required");
+      return;
+    }
+
+    setLoading(true);
+    try{
+      await sendToTelegram(buildMessage(payload));
+      showNotice("ok", getT("ok_sent") || "Sent");
+      form.reset();
+      initTimeSelect(form);
+      document.querySelector("footer")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }catch(_err){
+      showNotice("err", getT("err_send") || "Error");
+    }finally{
+      setLoading(false);
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initBooking);

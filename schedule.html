@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="az">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#919c58" />
+  <title>Bahçe Restoran — Live Music Schedule</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="Bahçe Restoran">
+        <img class="brand-avatar" src="./assets/avatar.jpg" alt="Bahçe Restoran" onerror="this.style.display='none'" />
+        <div class="brand-text">
+          <div class="brand-title">Bahçe Restoran</div>
+          <div class="brand-sub" data-i18n="hero_desc">FOOD • DRINKS • MUSIC • SHISHA</div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="./index.html#top" data-i18n="nav_home">Ana səhifə</a>
+        <a href="./index.html#music" data-i18n="nav_music">Canlı musiqi</a>
+        <a href="./index.html#menu" data-i18n="nav_menu">Menyu</a>
+        <a href="./index.html#contacts" data-i18n="nav_contacts">Əlaqə</a>
+        <a href="./index.html#location" data-i18n="nav_location">Lokasiya</a>
+        <a href="./index.html#rules" data-i18n="nav_rules">Qaydalar</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang" aria-label="Language">
+          <button type="button" data-lang-btn="az" aria-pressed="true">AZ</button>
+          <button type="button" data-lang-btn="ru" aria-pressed="false">RU</button>
+          <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+        </div>
+
+        <a class="icon-link" data-social="instagram" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 16.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Z" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M17.7 6.3h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </a>
+        <a class="icon-link" data-social="whatsapp" href="https://wa.me/994507171199" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+            <path d="M19.11 17.53c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.33-.81-.72-1.36-1.6-1.52-1.87-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.52-.45-.45-.61-.46-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.28 0 1.35.98 2.66 1.11 2.84.14.18 1.93 2.95 4.67 4.13.65.28 1.16.45 1.56.58.66.21 1.25.18 1.72.11.52-.08 1.6-.66 1.83-1.3.23-.64.23-1.18.16-1.3-.07-.12-.25-.2-.52-.34Z"/>
+            <path d="M16 3C8.83 3 3 8.83 3 16c0 2.3.61 4.46 1.67 6.34L3 29l6.84-1.6A12.9 12.9 0 0 0 16 29c7.17 0 13-5.83 13-13S23.17 3 16 3Zm0 23.6c-2.08 0-4.03-.62-5.66-1.69l-.41-.27-4.06.95.98-3.96-.27-.41A10.54 10.54 0 0 1 5.4 16C5.4 10.15 10.15 5.4 16 5.4S26.6 10.15 26.6 16 21.85 26.6 16 26.6Z"/>
+          </svg>
+        </a>
+
+        <button class="burger" type="button" data-burger aria-label="Menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer-backdrop" data-drawer-backdrop></div>
+  <aside class="drawer" data-drawer aria-label="Mobile Menu">
+    <div class="drawer-top">
+      <div class="drawer-title" data-i18n="nav_schedule">Proqram</div>
+      <button class="burger" type="button" data-drawer-close aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-lang" aria-label="Language">
+      <button type="button" data-lang-btn="az" aria-pressed="true">AZ</button>
+      <button type="button" data-lang-btn="ru" aria-pressed="false">RU</button>
+      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+    </div>
+
+    <a href="./index.html#top" data-i18n="nav_home">Ana səhifə</a>
+    <a href="./index.html#music" data-i18n="nav_music">Canlı musiqi</a>
+    <a href="./index.html#menu" data-i18n="nav_menu">Menyu</a>
+    <a href="./index.html#contacts" data-i18n="nav_contacts">Əlaqə</a>
+    <a href="./index.html#location" data-i18n="nav_location">Lokasiya</a>
+    <a href="./index.html#rules" data-i18n="nav_rules">Qaydalar</a>
+
+    <div class="drawer-social">
+      <a class="icon-link" data-social="instagram" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M12 16.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Z" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M17.7 6.3h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </a>
+      <a class="icon-link" data-social="whatsapp" href="https://wa.me/994507171199" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+          <path d="M19.11 17.53c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.33-.81-.72-1.36-1.6-1.52-1.87-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.52-.45-.45-.61-.46-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.28 0 1.35.98 2.66 1.11 2.84.14.18 1.93 2.95 4.67 4.13.65.28 1.16.45 1.56.58.66.21 1.25.18 1.72.11.52-.08 1.6-.66 1.83-1.3.23-.64.23-1.18.16-1.3-.07-.12-.25-.2-.52-.34Z"/>
+          <path d="M16 3C8.83 3 3 8.83 3 16c0 2.3.61 4.46 1.67 6.34L3 29l6.84-1.6A12.9 12.9 0 0 0 16 29c7.17 0 13-5.83 13-13S23.17 3 16 3Zm0 23.6c-2.08 0-4.03-.62-5.66-1.69l-.41-.27-4.06.95.98-3.96-.27-.41A10.54 10.54 0 0 1 5.4 16C5.4 10.15 10.15 5.4 16 5.4S26.6 10.15 26.6 16 21.85 26.6 16 26.6Z"/>
+        </svg>
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-title" data-i18n="schedule_title">Canlı musiqi proqramı</h1>
+        <p class="page-sub" data-i18n="schedule_sub">Hər gün 21:00–23:00</p>
+      </div>
+    </section>
+
+    <section class="section section-surface">
+      <div class="container">
+        <div class="live-feature-media schedule-poster" aria-label="Upcoming event poster">
+          <img class="live-poster" src="./assets/posters/live-event.png" alt="Live event poster" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div style="font-weight:680">Bahçe Restoran</div>
+        <small>© <span data-year></span></small>
+        <div style="height:6px"></div>
+        <small data-i18n="footer_hours">Çərşənbə axşamı–Bazar: 10:00 — son müştəri (B.e. bağlı)</small>
+        <div style="height:10px"></div>
+        <small><a href="tel:+9945071711199" style="color:inherit;text-decoration:none">+994 50 717 11 99</a></small>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <a class="icon-link" data-social="instagram" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 16.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Z" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M17.7 6.3h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </a>
+        <a class="icon-link" data-social="whatsapp" href="https://wa.me/994507171199" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+            <path d="M19.11 17.53c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.33-.81-.72-1.36-1.6-1.52-1.87-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.52-.45-.45-.61-.46-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.28 0 1.35.98 2.66 1.11 2.84.14.18 1.93 2.95 4.67 4.13.65.28 1.16.45 1.56.58.66.21 1.25.18 1.72.11.52-.08 1.6-.66 1.83-1.3.23-.64.23-1.18.16-1.3-.07-.12-.25-.2-.52-.34Z"/>
+            <path d="M16 3C8.83 3 3 8.83 3 16c0 2.3.61 4.46 1.67 6.34L3 29l6.84-1.6A12.9 12.9 0 0 0 16 29c7.17 0 13-5.83 13-13S23.17 3 16 3Zm0 23.6c-2.08 0-4.03-.62-5.66-1.69l-.41-.27-4.06.95.98-3.96-.27-.41A10.54 10.54 0 0 1 5.4 16C5.4 10.15 10.15 5.4 16 5.4S26.6 10.15 26.6 16 21.85 26.6 16 26.6Z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
