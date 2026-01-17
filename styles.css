@@ -201,6 +201,10 @@ svg{display:block}
   border:1px solid rgba(245,245,240,.18);
   background:transparent;
   color:rgba(255,255,255,.82);
+  -webkit-appearance:none;
+  appearance:none;
+  font:inherit;
+  text-decoration:none;
   padding:8px 10px;
   border-radius:999px;
   cursor:pointer;
@@ -462,6 +466,12 @@ svg{display:block}
   color:#fff;
 }
 .drawer a:hover{border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.12)}
+.drawer .icon-link{
+  padding:0;
+  display:grid;
+  place-items:center;
+}
+.drawer .icon-link svg{display:block;margin:0}
 .drawer .drawer-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .drawer .drawer-title{font-weight:680;letter-spacing:.2px;color:#fff}
 .drawer .drawer-lang{display:flex;gap:8px;flex-wrap:wrap}
@@ -473,6 +483,10 @@ svg{display:block}
 .drawer .drawer-lang button{
   border:1px solid rgba(245,245,240,.14);
   background:rgba(245,245,240,.06);
+  color:#fff;
+  font:inherit;
+  -webkit-appearance:none;
+  appearance:none;
 }
 .drawer .drawer-lang button[aria-pressed="true"]{
   border-color:rgba(255,255,255,.55);
@@ -494,6 +508,14 @@ svg{display:block}
   border:1px solid rgba(28,28,28,.28);
   border-radius:14px;
   padding:12px 12px;
+  font:inherit;
+  font-size:16px;
+  line-height:1.2;
+  min-height:46px;
+}
+.select{
+  -webkit-appearance:none;
+  appearance:none;
 }
 .input[type="date"],.input[type="time"],.input[type="number"]{
   -webkit-appearance:none;
