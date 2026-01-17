@@ -51,6 +51,13 @@ function sanitizeDigits(v){
   return String(v || "").replace(/\D/g, "");
 }
 
+function sanitizeName(v){
+  let s = String(v || "");
+  s = s.replace(/[^\p{L} \-']/gu, "");
+  s = s.replace(/\s+/g, " ");
+  return s.trimStart();
+}
+
 function getLang(){
   return localStorage.getItem("lang") || "az";
 }
@@ -113,6 +120,7 @@ function initBooking(){
 
   const phoneInput = form.querySelector("input[name='phone']");
   const guestsInput = form.querySelector("input[name='guests']");
+  const nameInput = form.querySelector("input[name='name']");
 
   phoneInput?.addEventListener("input", ()=>{
     const next = sanitizePhone(phoneInput.value);
@@ -124,18 +132,33 @@ function initBooking(){
     if(next !== guestsInput.value) guestsInput.value = next;
   });
 
+  nameInput?.addEventListener("input", ()=>{
+    const next = sanitizeName(nameInput.value);
+    if(next !== nameInput.value) nameInput.value = next;
+  });
+
+  const COOLDOWN_MS = 30_000;
+  let lastSubmitAt = 0;
+
   form.addEventListener("submit", async (e)=>{
     e.preventDefault();
+
+    const now = Date.now();
+    if(lastSubmitAt && (now - lastSubmitAt) < COOLDOWN_MS){
+      showNotice("err", getT("err_send") || "Please try again later.");
+      return;
+    }
 
     const fd = new FormData(form);
     const payload = {
       lang: getLang(),
-      name: String(fd.get("name") || "").trim(),
+      name: sanitizeName(String(fd.get("name") || "").trim()),
       phone: sanitizePhone(String(fd.get("phone") || "").trim()),
       date: String(fd.get("date") || "").trim(),
       time: String(fd.get("time") || "").trim(),
       guests: sanitizeDigits(String(fd.get("guests") || "").trim()),
-      message: String(fd.get("message") || "").trim()
+      message: String(fd.get("message") || "").trim(),
+      company: String(fd.get("company") || "").trim()
     };
 
     if(!payload.phone){
@@ -146,6 +169,7 @@ function initBooking(){
     setLoading(true);
     try{
       await sendBooking(payload);
+      lastSubmitAt = Date.now();
       showNotice("ok", getT("ok_sent") || "Sent");
       form.reset();
       initTimeSelect(form);

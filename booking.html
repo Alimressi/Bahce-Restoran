@@ -22,8 +22,8 @@
       <nav class="nav" aria-label="Primary">
         <a href="./index.html#top" data-i18n="nav_home">Ana səhifə</a>
         <a href="./index.html#music" data-i18n="nav_music">Canlı musiqi</a>
-        <a href="./index.html#menu" data-i18n="nav_menu">Menyu</a>
         <a href="./index.html#contacts" data-i18n="nav_contacts">Əlaqə</a>
+        <a href="./index.html#menu" data-i18n="nav_menu">Menyu</a>
         <a href="./index.html#location" data-i18n="nav_location">Lokasiya</a>
         <a href="./index.html#rules" data-i18n="nav_rules">Qaydalar</a>
       </nav>
@@ -76,8 +76,8 @@
 
     <a href="./index.html#top" data-i18n="nav_home">Ana səhifə</a>
     <a href="./index.html#music" data-i18n="nav_music">Canlı musiqi</a>
-    <a href="./index.html#menu" data-i18n="nav_menu">Menyu</a>
     <a href="./index.html#contacts" data-i18n="nav_contacts">Əlaqə</a>
+    <a href="./index.html#menu" data-i18n="nav_menu">Menyu</a>
     <a href="./index.html#location" data-i18n="nav_location">Lokasiya</a>
     <a href="./index.html#rules" data-i18n="nav_rules">Qaydalar</a>
 
@@ -108,6 +108,11 @@
     <section class="section section-surface">
       <div class="container">
         <form class="form" id="bookingForm" novalidate>
+          <div class="field visually-hidden" aria-hidden="true">
+            <div class="label">Company</div>
+            <input class="input" name="company" autocomplete="off" tabindex="-1" />
+          </div>
+
           <div class="field">
             <div class="label" data-i18n="f_name">Ad</div>
             <input class="input" name="name" autocomplete="name" />

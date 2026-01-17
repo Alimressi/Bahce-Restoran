@@ -537,7 +537,7 @@ svg{display:block}
   background:rgba(255,255,255,.14);
   color:var(--c-text);
 }
-.notice.ok{border-color:rgba(255,255,255,.40)}
+.notice.ok{border-color:rgba(70,170,110,.55);background:rgba(70,170,110,.14)}
 .notice.err{border-color:rgba(230,80,80,.45);background:rgba(230,80,80,.08)}
 
 .page-hero{

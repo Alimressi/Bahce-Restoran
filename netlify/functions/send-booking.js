@@ -25,6 +25,37 @@ function buildMessage(data){
   return lines.join("\n");
 }
 
+const RATE = {
+  windowMs: 10 * 60 * 1000,
+  max: 3
+};
+
+const hitsByIp = new Map();
+
+function getClientIp(event){
+  const h = event.headers || {};
+  const direct = h["x-nf-client-connection-ip"] || h["X-Nf-Client-Connection-Ip"];
+  if(direct) return String(direct).trim();
+  const fwd = h["x-forwarded-for"] || h["X-Forwarded-For"];
+  if(!fwd) return "";
+  return String(fwd).split(",")[0].trim();
+}
+
+function isRateLimited(ip){
+  if(!ip) return false;
+  const now = Date.now();
+  const cutoff = now - RATE.windowMs;
+  const list = hitsByIp.get(ip) || [];
+  const next = list.filter((t)=>t >= cutoff);
+  if(next.length >= RATE.max){
+    hitsByIp.set(ip, next);
+    return true;
+  }
+  next.push(now);
+  hitsByIp.set(ip, next);
+  return false;
+}
+
 exports.handler = async (event)=>{
   const headers = {
     "Content-Type": "application/json",
@@ -53,6 +84,15 @@ exports.handler = async (event)=>{
     payload = JSON.parse(event.body || "{}");
   }catch(_err){
     return { statusCode: 400, headers, body: JSON.stringify({ ok: false, error: "Invalid JSON" }) };
+  }
+
+  if(payload && payload.company){
+    return { statusCode: 200, headers, body: JSON.stringify({ ok: true }) };
+  }
+
+  const ip = getClientIp(event);
+  if(isRateLimited(ip)){
+    return { statusCode: 429, headers, body: JSON.stringify({ ok: false, error: "Too many requests" }) };
   }
 
   if(!payload || !payload.phone){
