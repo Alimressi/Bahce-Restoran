@@ -30,7 +30,7 @@ const I18N = {
     r4_b: "19:00-dan sonra restoran 13 yaşdan kiçik uşaqları qəbul etmir. 13–18 yaş arası qonaqlar yalnız valideynlərin müşayiəti ilə qəbul olunur.",
 
     r5_t: "Məkanın formatı",
-    r5_b: "Restoran yalnız kişilərdən ibarət şirkətləri qəbul etmir.",
+    r5_b: "Restoran yalnız kişilərdən ibarət olan qrupları qəbul etmir.",
 
     r6_t: "Depozit sistemi",
     r6_b: "— Çərşənbə axşamı, çərşənbə və cümə axşamı hər qonaq üçün depozit məbləği 50 AZN təşkil edir. — Cümə, şənbə və bazar günləri hər qonaq üçün depozit məbləği 100 AZN təşkil edir. Qəlyan depozit məbləğinə daxil deyil.",
@@ -90,6 +90,13 @@ const I18N = {
 
     ok_sent: "Rezervasiya göndərildi. Tezliklə sizinlə əlaqə saxlayacağıq.",
     err_required: "Zəhmət olmasa, telefon nömrəsini daxil edin.",
+    err_fill_all: "Zəhmət olmasa, bütün zəruri xanaları doldurun.",
+    err_missing_prefix: "Doldurulmalıdır:",
+    field_name: "Ad",
+    field_phone: "Telefon",
+    field_date: "Tarix",
+    field_time: "Saat",
+    field_guests: "Qonaq sayı",
     err_send: "Göndərmə zamanı xəta baş verdi. Zəhmət olmasa, yenidən cəhd edin."
   },
   ru: {
@@ -183,6 +190,13 @@ const I18N = {
 
     ok_sent: "Бронь отправлена. Мы свяжемся с вами в ближайшее время.",
     err_required: "Пожалуйста, укажите номер телефона.",
+    err_fill_all: "Пожалуйста, заполните все поля.",
+    err_missing_prefix: "Нужно заполнить:",
+    field_name: "Имя",
+    field_phone: "Телефон",
+    field_date: "Дата",
+    field_time: "Время",
+    field_guests: "Количество гостей",
     err_send: "Ошибка отправки. Пожалуйста, попробуйте ещё раз."
   },
   en: {
@@ -276,6 +290,13 @@ const I18N = {
 
     ok_sent: "Reservation sent. We will contact you shortly.",
     err_required: "Please enter your phone number.",
+    err_fill_all: "Please fill in all required fields.",
+    err_missing_prefix: "Please fill:",
+    field_name: "Name",
+    field_phone: "Phone",
+    field_date: "Date",
+    field_time: "Time",
+    field_guests: "Number of guests",
     err_send: "Sending failed. Please try again."
   }
 };
@@ -283,7 +304,7 @@ const I18N = {
 window.I18N = I18N;
 
 const SOCIAL = {
-  instagramUrl: "https://instagram.com/",
+  instagramUrl: "https://www.instagram.com/bahce_restoran/",
   whatsappUrl: "https://wa.me/994507171199"
 };
 
