@@ -56,6 +56,10 @@ function showNotice(kind, text){
   el.classList.remove("ok","err");
   el.classList.add(kind);
   el.textContent = text;
+
+  requestAnimationFrame(()=>{
+    el.scrollIntoView({ behavior: "smooth", block: "end" });
+  });
 }
 
 function setLoading(isLoading){
@@ -176,7 +180,6 @@ function initBooking(){
       showNotice("ok", getT("ok_sent") || "Sent");
       form.reset();
       initTimeSelect(form);
-      document.querySelector("footer")?.scrollIntoView({ behavior: "smooth", block: "start" });
     }catch(_err){
       showNotice("err", getT("err_send") || "Error");
     }finally{
