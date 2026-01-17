@@ -658,15 +658,60 @@ svg{display:block}
 }
 
 .contact-card{padding:22px}
-.contact-top{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center}
-.contact-phone{font-size:24px;line-height:1.12;font-weight:680;letter-spacing:.2px;margin-top:8px}
+.contact-card{
+  padding:26px;
+  border-radius:18px;
+  background:linear-gradient(180deg, rgba(145,156,88,.09), rgba(255,255,255,.06));
+  border:1px solid rgba(145,156,88,.22);
+}
+.contact-top{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:18px;
+  align-items:center;
+}
+.contact-phone{margin-top:10px}
 .contact-phone a{color:var(--c-text)}
+.contact-phone-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  min-height:52px;
+  padding:12px 14px;
+  border-radius:16px;
+  border:1px solid rgba(28,28,28,.28);
+  background:rgba(255,255,255,.22);
+  text-decoration:none;
+  font-size:22px;
+  font-weight:760;
+  letter-spacing:.2px;
+  line-height:1;
+}
+.contact-phone-btn:hover{border-color:rgba(28,28,28,.42)}
 .contact-sub{margin-top:10px;color:var(--c-text-2)}
-.contact-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;align-items:center}
-.contact-actions .btn{min-width:160px;justify-content:center}
+.contact-actions{display:flex;flex-direction:column;gap:12px;align-items:stretch;justify-content:center}
+.contact-actions .btn{width:100%;min-height:52px;justify-content:center;border-radius:16px}
 
-.btn.with-icon{gap:10px}
+.btn.with-icon{gap:12px}
+.btn.with-icon .btn-icon{
+  width:34px;
+  height:34px;
+  display:grid;
+  place-items:center;
+  border-radius:999px;
+  background:rgba(0,0,0,.06);
+  border:1px solid rgba(245,245,240,.12);
+  flex:0 0 auto;
+}
 .btn.with-icon svg{width:18px;height:18px;display:block}
+.btn.with-icon .btn-label{display:inline-block;line-height:1}
+
+@media (max-width: 720px){
+  .contact-top{grid-template-columns:1fr}
+  .contact-card{padding:22px}
+  .contact-phone-btn{font-size:20px}
+}
 
 .map-embed{width:100%;height:380px}
 @media (max-width: 640px){
