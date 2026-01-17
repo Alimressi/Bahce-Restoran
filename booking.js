@@ -1,45 +1,13 @@
-const TELEGRAM = {
-  token: "PUT_TELEGRAM_BOT_TOKEN_HERE",
-  chatId: "PUT_TELEGRAM_CHAT_ID_HERE"
-};
-
-function buildMessage(data){
-  const lines = [
-    "Bahçe Restoran — Booking",
-    "",
-    `Name: ${data.name || "-"}`,
-    `Phone: ${data.phone || "-"}`,
-    `Date: ${data.date || "-"}`,
-    `Time: ${data.time || "-"}`,
-    `Guests: ${data.guests || "-"}`,
-    `Message: ${data.message || "-"}`
-  ];
-  return lines.join("\n");
-}
-
-async function sendToTelegram(text){
-  const { token, chatId } = TELEGRAM;
-  if(!token || token.includes("PUT_TELEGRAM_BOT_TOKEN_HERE")){
-    throw new Error("Telegram token is not set");
-  }
-  if(!chatId || chatId.includes("PUT_TELEGRAM_CHAT_ID_HERE")){
-    throw new Error("Telegram chat_id is not set");
-  }
-
-  const url = `https://api.telegram.org/bot${token}/sendMessage`;
-  const res = await fetch(url, {
+async function sendBooking(payload){
+  const res = await fetch("/.netlify/functions/send-booking", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      chat_id: chatId,
-      text,
-      disable_web_page_preview: true
-    })
+    body: JSON.stringify(payload)
   });
 
   if(!res.ok){
     const t = await res.text().catch(()=>"");
-    throw new Error(t || `Telegram error: ${res.status}`);
+    throw new Error(t || `Request failed: ${res.status}`);
   }
 }
 
@@ -58,7 +26,7 @@ function showNotice(kind, text){
   el.textContent = text;
 
   requestAnimationFrame(()=>{
-    el.scrollIntoView({ behavior: "smooth", block: "end" });
+    window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" });
   });
 }
 
@@ -161,6 +129,7 @@ function initBooking(){
 
     const fd = new FormData(form);
     const payload = {
+      lang: getLang(),
       name: String(fd.get("name") || "").trim(),
       phone: sanitizePhone(String(fd.get("phone") || "").trim()),
       date: String(fd.get("date") || "").trim(),
@@ -176,7 +145,7 @@ function initBooking(){
 
     setLoading(true);
     try{
-      await sendToTelegram(buildMessage(payload));
+      await sendBooking(payload);
       showNotice("ok", getT("ok_sent") || "Sent");
       form.reset();
       initTimeSelect(form);
