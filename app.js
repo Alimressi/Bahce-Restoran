@@ -78,7 +78,7 @@ const I18N = {
     schedule_sub: "Hər gün 21:00–23:00",
 
     booking_title: "Masa rezervasiyası",
-    booking_sub: "Rezervasiyanızı göndərin — cavab üçün sizinlə əlaqə saxlayacağıq.",
+    booking_sub: "Rezervasiyanız yaxın vaxtda emal olunacaq.",
     f_name: "Ad",
     f_phone: "Telefon",
     f_date: "Tarix",
@@ -278,7 +278,7 @@ const I18N = {
     schedule_sub: "Daily 21:00–23:00",
 
     booking_title: "Table reservation",
-    booking_sub: "Send your booking request — we will contact you to confirm.",
+    booking_sub: "Your booking will be processed shortly.",
     f_name: "Name",
     f_phone: "Phone",
     f_date: "Date",
