@@ -7,7 +7,14 @@ async function sendBooking(payload){
 
   if(!res.ok){
     const t = await res.text().catch(()=>"");
-    throw new Error(t || `Request failed: ${res.status}`);
+    let msg = "";
+    try{
+      const j = JSON.parse(t);
+      if(j && typeof j.error === "string") msg = j.error;
+    }catch(_e){
+      // ignore
+    }
+    throw new Error(msg || t || `Request failed: ${res.status}`);
   }
 }
 
@@ -140,6 +147,14 @@ function initBooking(){
   const COOLDOWN_MS = 30_000;
   let lastSubmitAt = 0;
 
+  const requiredFields = [
+    { key: "name", labelKey: "field_name" },
+    { key: "phone", labelKey: "field_phone" },
+    { key: "date", labelKey: "field_date" },
+    { key: "time", labelKey: "field_time" },
+    { key: "guests", labelKey: "field_guests" }
+  ];
+
   form.addEventListener("submit", async (e)=>{
     e.preventDefault();
 
@@ -161,8 +176,15 @@ function initBooking(){
       company: String(fd.get("company") || "").trim()
     };
 
-    if(!payload.phone){
-      showNotice("err", getT("err_required") || "Phone is required");
+    const missing = [];
+    requiredFields.forEach((f)=>{
+      if(!payload[f.key]) missing.push(getT(f.labelKey) || f.key);
+    });
+
+    if(missing.length){
+      const prefix = getT("err_missing_prefix") || "Please fill:";
+      const base = getT("err_fill_all") || "Please fill in all required fields.";
+      showNotice("err", `${base}\n${prefix} ${missing.join(", ")}`);
       return;
     }
 
@@ -174,7 +196,8 @@ function initBooking(){
       form.reset();
       initTimeSelect(form);
     }catch(_err){
-      showNotice("err", getT("err_send") || "Error");
+      const msg = _err && _err.message ? String(_err.message) : "";
+      showNotice("err", msg || (getT("err_send") || "Error"));
     }finally{
       setLoading(false);
     }

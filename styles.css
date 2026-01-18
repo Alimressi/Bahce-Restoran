@@ -312,6 +312,13 @@ svg{display:block}
 }
 .btn-primary:hover{background:linear-gradient(180deg, rgba(74,90,58,.99), rgba(74,90,58,.88))}
 
+.btn-brown{
+  background:linear-gradient(180deg, #694e43, #694e43);
+  color:#ffffff;
+  border-color:#694e43;
+}
+.btn-brown:hover{background:linear-gradient(180deg, #694e43, #694e43)}
+
 .section{padding:54px 0}
 .story-section{
   min-height:100svh;
@@ -359,6 +366,15 @@ svg{display:block}
 }
 #menu .container{width:100%}
 #menu .section-sub{max-width:920px;margin-left:auto;margin-right:auto}
+
+.menu-frame{
+  margin-top:18px;
+  padding:14px;
+  border-radius:18px;
+  border:1px solid rgba(145,156,88,.38);
+  background:rgba(255,255,255,.10);
+  box-shadow:0 10px 22px rgba(0,0,0,.10);
+}
 
 .grid{
   display:grid;
@@ -690,8 +706,8 @@ svg{display:block}
 }
 .contact-phone-btn:hover{border-color:rgba(28,28,28,.42)}
 .contact-sub{margin-top:10px;color:var(--c-text-2)}
-.contact-actions{display:flex;flex-direction:column;gap:12px;align-items:stretch;justify-content:center}
-.contact-actions .btn{width:100%;min-height:52px;justify-content:center;border-radius:16px}
+.contact-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;align-items:center}
+.contact-actions .btn{width:clamp(190px, 46vw, 260px);min-height:46px;padding:10px 14px;justify-content:center;border-radius:16px}
 
 .btn.with-icon{gap:12px}
 .btn.with-icon .btn-icon{

@@ -115,7 +115,7 @@
 
           <div class="field">
             <div class="label" data-i18n="f_name">Ad</div>
-            <input class="input" name="name" autocomplete="name" />
+            <input class="input" name="name" autocomplete="name" required />
           </div>
 
           <div class="field">
@@ -126,17 +126,17 @@
           <div class="grid" style="gap:12px">
             <div class="field" style="grid-column:span 6">
               <div class="label" data-i18n="f_date">Tarix</div>
-              <input class="input" type="text" name="date" placeholder="" autocomplete="off" />
+              <input class="input" type="text" name="date" placeholder="" autocomplete="off" required />
             </div>
             <div class="field" style="grid-column:span 6">
               <div class="label" data-i18n="f_time">Saat</div>
-              <select class="select" name="time" autocomplete="off"></select>
+              <select class="select" name="time" autocomplete="off" required></select>
             </div>
           </div>
 
           <div class="field">
             <div class="label" data-i18n="f_guests">Qonaq sayı</div>
-            <input class="input" name="guests" inputmode="numeric" placeholder="" pattern="^[0-9]+$" />
+            <input class="input" name="guests" inputmode="numeric" placeholder="" pattern="^[0-9]+$" required />
           </div>
 
           <div class="field">

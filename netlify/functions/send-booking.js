@@ -95,8 +95,10 @@ exports.handler = async (event)=>{
     return { statusCode: 429, headers, body: JSON.stringify({ ok: false, error: "Too many requests" }) };
   }
 
-  if(!payload || !payload.phone){
-    return { statusCode: 400, headers, body: JSON.stringify({ ok: false, error: "Phone is required" }) };
+  const required = ["name","phone","date","time","guests"];
+  const missing = required.filter((k)=>!(payload && String(payload[k] ?? "").trim()));
+  if(missing.length){
+    return { statusCode: 400, headers, body: JSON.stringify({ ok: false, error: `Missing required fields: ${missing.join(", ")}` }) };
   }
 
   const text = buildMessage(payload);
