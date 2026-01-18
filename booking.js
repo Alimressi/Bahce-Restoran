@@ -122,6 +122,20 @@ function initBooking(){
   const form = document.getElementById("bookingForm");
   if(!form) return;
 
+  window.addEventListener("langchange", ()=>{
+    const notice = document.getElementById("formNotice");
+    if(!notice || notice.style.display === "none") return;
+
+    if(notice.classList.contains("ok")){
+      notice.textContent = getT("ok_sent") || notice.textContent;
+      return;
+    }
+
+    if(notice.classList.contains("err")){
+      notice.textContent = getT("err_send") || notice.textContent;
+    }
+  });
+
   initPickers(form);
   initTimeSelect(form);
 
