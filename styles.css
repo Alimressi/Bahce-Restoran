@@ -5,7 +5,7 @@
   src:url('./assets/fonts/symphonigraphy.ttf') format('truetype');
   font-weight:400;
   font-style:normal;
-  font-display:swap;
+  font-display:block;
 }
 
 :root{
@@ -567,6 +567,7 @@ svg{display:block}
   border:1px solid rgba(245,245,240,.12);
   background:rgba(255,255,255,.14);
   color:var(--c-text);
+  text-align:center;
 }
 .notice.ok{border-color:rgba(70,170,110,.55);background:rgba(70,170,110,.14)}
 .notice.err{border-color:rgba(230,80,80,.45);background:rgba(230,80,80,.08)}
