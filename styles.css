@@ -276,26 +276,32 @@ svg{display:block}
   width:100%;
   color:#fff;
 }
-.hero-content{max-width:860px;margin:0 auto}
+.hero-content{max-width:860px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
 .h-title{font-size:46px;line-height:1.06;margin:0 0 10px;letter-spacing:.2px}
 .h-title.brand-hero{
   font-family:var(--font-hero);
   font-weight:400;
   letter-spacing:.6px;
   line-height:1;
-  font-size:clamp(100px, 11vw, 150px);
+  font-size:clamp(112px, 12.5vw, 170px);
+  margin:0 0 6px;
+  display:inline-flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
 }
+.brand-hero-main{display:block;transform:translate(-20px, 7px)}
 .brand-hero-sub{
   display:block;
-  margin-top:10px;
+  margin-top:2px;
   font-family:var(--font-brand-sub);
-  font-size:14px;
+  font-size:18px;
   letter-spacing:6px;
   text-transform:uppercase;
   color:rgba(255,255,255,.92);
 }
-.h-tag{margin:0 0 10px;color:rgba(255,255,255,.84);font-size:16px;letter-spacing:.4px}
-.h-kicker{margin:0 0 20px;color:#fff;font-weight:520;letter-spacing:.9px}
+.h-tag{margin:4px 0 6px;color:rgba(255,255,255,.84);font-size:16px;letter-spacing:.4px;display:inline-block;width:fit-content}
+.h-kicker{margin:0 0 18px;color:#fff;font-weight:520;letter-spacing:.9px;display:inline-block;width:fit-content}
 
 .btn-row{display:flex;flex-wrap:wrap;gap:10px}
 .btn-row.center{justify-content:center}

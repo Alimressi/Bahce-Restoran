@@ -8,7 +8,7 @@ const I18N = {
     nav_rules: "Qaydalar",
 
     hero_title: "Bahçe Restoran",
-    hero_title_html: "Bahçe <span class=\"brand-hero-sub\">RESTORAN</span>",
+    hero_title_html: "<span class=\"brand-hero-main\">Bahçe</span> <span class=\"brand-hero-sub\">RESTORAN</span>",
     hero_slogan: "Turkish Vibes in Baku",
     hero_desc: "FOOD • DRINKS • MUSIC • SHISHA",
     cta_book: "Masa bron et",
@@ -108,7 +108,7 @@ const I18N = {
     nav_rules: "Правила",
 
     hero_title: "Bahçe Restoran",
-    hero_title_html: "Bahçe <span class=\"brand-hero-sub\">RESTORAN</span>",
+    hero_title_html: "<span class=\"brand-hero-main\">Bahçe</span> <span class=\"brand-hero-sub\">RESTORAN</span>",
     hero_slogan: "Turkish Vibes in Baku",
     hero_desc: "FOOD • DRINKS • MUSIC • SHISHA",
     cta_book: "Забронировать стол",
@@ -208,7 +208,7 @@ const I18N = {
     nav_rules: "Rules",
 
     hero_title: "Bahçe Restoran",
-    hero_title_html: "Bahçe <span class=\"brand-hero-sub\">RESTORAN</span>",
+    hero_title_html: "<span class=\"brand-hero-main\">Bahçe</span> <span class=\"brand-hero-sub\">RESTORAN</span>",
     hero_slogan: "Turkish Vibes in Baku",
     hero_desc: "FOOD • DRINKS • MUSIC • SHISHA",
     cta_book: "Reserve a table",
