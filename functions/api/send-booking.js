@@ -58,29 +58,6 @@ function isRateLimited(ip){
   return false;
 }
 
-function json(body, status = 200){
-  return new Response(JSON.stringify(body), {
-    status,
-    headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers": "Content-Type",
-      "Access-Control-Allow-Methods": "POST, OPTIONS"
-    }
-  });
-}
-
-export async function onRequestOptions(){
-  return new Response("", {
-    status: 200,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers": "Content-Type",
-      "Access-Control-Allow-Methods": "POST, OPTIONS"
-    }
-  });
-}
-
 function json(data, status = 200) {
   return new Response(JSON.stringify(data, null, 2), {
     status,
