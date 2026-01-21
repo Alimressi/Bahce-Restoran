@@ -85,15 +85,15 @@ export async function onRequestPost(context){
   const token = context.env && context.env.TELEGRAM_BOT_TOKEN;
   const chatId = context.env && context.env.TELEGRAM_CHAT_ID;
 
-  if(!token || !chatId){
-    return json({ ok: false, error: "Server is not configured" }, 500);
-  }
-
   let payload;
   try{
     payload = await context.request.json();
   }catch(_err){
     return json({ ok: false, error: "Invalid JSON" }, 400);
+  }
+
+  if(!token || !chatId){
+    return json({ ok: false, error: "NOT_CONFIGURED" }, 503);
   }
 
   if(payload && payload.company){

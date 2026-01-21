@@ -14,6 +14,10 @@ async function sendBooking(payload){
     }catch(_e){
       // ignore
     }
+
+    if(msg === "NOT_CONFIGURED"){
+      throw new Error(getT("booking_unavailable") || "Online booking is temporarily unavailable.");
+    }
     throw new Error(msg || t || `Request failed: ${res.status}`);
   }
 }

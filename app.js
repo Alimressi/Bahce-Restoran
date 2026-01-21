@@ -89,6 +89,7 @@ const I18N = {
     f_hint: "Depozit: Çərşənbə axşamı / Çərşənbə / Cümə axşamı — 50 AZN (hər qonaq üçün), Cümə / Şənbə / Bazar — 100 AZN (hər qonaq üçün). Qəlyan depozitə daxil deyil.",
 
     ok_sent: "Rezervasiyanız qəbul edildi və hazırda emal olunur.",
+    booking_unavailable: "Onlayn rezervasiya müvəqqəti olaraq əlçatan deyil. Zəhmət olmasa, zəng edin və ya WhatsApp vasitəsilə yazın.",
     err_required: "Zəhmət olmasa, telefon nömrəsini daxil edin.",
     err_fill_all: "Zəhmət olmasa, bütün zəruri xanaları doldurun.",
     err_missing_prefix: "Doldurulmalıdır:",
@@ -189,6 +190,7 @@ const I18N = {
     f_hint: "Депозит: Вторник / Среда / Четверг — 50 AZN (с человека), Пятница / Суббота / Воскресенье — 100 AZN (с человека). Кальян в депозит не входит.",
 
     ok_sent: "Ваша бронь принята и находится в обработке.",
+    booking_unavailable: "Онлайн-бронирование временно недоступно. Пожалуйста, позвоните нам или напишите в WhatsApp.",
     err_required: "Пожалуйста, укажите номер телефона.",
     err_fill_all: "Пожалуйста, заполните все поля.",
     err_missing_prefix: "Нужно заполнить:",
@@ -287,7 +289,7 @@ const I18N = {
     f_msg: "Message (optional)",
     f_submit: "Send reservation",
     f_hint: "Deposit: Tuesday / Wednesday / Thursday — 50 AZN per guest, Friday / Saturday / Sunday — 100 AZN per guest. Shisha is not included.",
-
+    booking_unavailable: "Online booking is temporarily unavailable. Please call us or message us on WhatsApp.",
     ok_sent: "Your reservation has been received and is being processed.",
     err_required: "Please enter your phone number.",
     err_fill_all: "Please fill in all required fields.",
