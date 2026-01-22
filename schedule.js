@@ -1,21 +1,21 @@
 const ARTISTS = [
   {
     date: "2026-01-18",
-    time: "21:00–23:00",
+    time: "20:00–23:00",
     name: "Bahçe Live Band",
     photo:
       "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1400&q=70"
   },
   {
     date: "2026-01-19",
-    time: "21:00–23:00",
+    time: "20:00–23:00",
     name: "DJ Night — Turkish Classics",
     photo:
       "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1400&q=70"
   },
   {
     date: "2026-01-20",
-    time: "21:00–23:00",
+    time: "20:00–23:00",
     name: "Acoustic Session",
     photo:
       "https://images.unsplash.com/photo-1521337706264-a414f153a5ea?auto=format&fit=crop&w=1400&q=70"

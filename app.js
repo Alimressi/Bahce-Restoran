@@ -21,7 +21,7 @@ const I18N = {
     r1_b: "Saat 10:00-dan son müştəriyə qədər.",
 
     r2_t: "Canlı musiqi",
-    r2_b: "Hər gün 21:00-dan 23:00-a qədər.",
+    r2_b: "Hər gün 20:00-dan 23:00-a qədər.",
 
     r3_t: "İstirahət günü",
     r3_b: "Bazar ertəsi restoran işləmir.",
@@ -47,7 +47,7 @@ const I18N = {
     rules_footer: "Administrasiya bu qaydalara əməl olunmadığı təqdirdə girişdən imtina etmək hüququnu özündə saxlayır.\n\nHörmətlə,\nBahçe ailəsi",
 
     music_title: "Canlı musiqi",
-    music_sub: "Hər gün 21:00-dan 23:00-a qədər",
+    music_sub: "Hər gün 20:00-dan 23:00-a qədər",
     music_btn: "Çıxış cədvəli",
     music_event_label: "Yaxın tədbir",
     music_event_title: "Bu həftə",
@@ -75,7 +75,7 @@ const I18N = {
     footer_hours: "Çərşənbə axşamı–Bazar: 10:00 — son müştəri (Bazar ertəsi bağlıdır)",
 
     schedule_title: "Canlı musiqi proqramı",
-    schedule_sub: "Hər gün 21:00–23:00",
+    schedule_sub: "Hər gün 20:00–23:00",
 
     booking_title: "Masa rezervasiyası",
     booking_sub: "Rezervasiyanız yaxın vaxtda emal olunacaq.",
@@ -122,7 +122,7 @@ const I18N = {
     r1_b: "С 10:00 до последнего клиента.",
 
     r2_t: "Живая музыка",
-    r2_b: "Каждый день с 21:00 до 23:00.",
+    r2_b: "Каждый день с 20:00 до 23:00.",
 
     r3_t: "Выходной день",
     r3_b: "По понедельникам ресторан не работает.",
@@ -148,7 +148,7 @@ const I18N = {
     rules_footer: "Администрация оставляет за собой право отказать во входе при несоблюдении данных правил.\n\nС уважением,\nСемья Bahçe",
 
     music_title: "Живая музыка",
-    music_sub: "Каждый день с 21:00 до 23:00",
+    music_sub: "Каждый день с 20:00 до 23:00",
     music_btn: "Расписание выступлений",
     music_event_label: "Ближайшее событие",
     music_event_title: "На этой неделе",
@@ -176,7 +176,7 @@ const I18N = {
     footer_hours: "Вторник–Воскресенье: 10:00 — последний гость (Понедельник выходной)",
 
     schedule_title: "Расписание живой музыки",
-    schedule_sub: "Каждый день 21:00–23:00",
+    schedule_sub: "Каждый день 20:00–23:00",
 
     booking_title: "Бронирование стола",
     booking_sub: "Ваша бронь будет обработана в ближайшее время.",
@@ -223,7 +223,7 @@ const I18N = {
     r1_b: "From 10:00 until the last guest.",
 
     r2_t: "Live music",
-    r2_b: "Daily from 21:00 to 23:00.",
+    r2_b: "Daily from 20:00 to 23:00.",
 
     r3_t: "Day off",
     r3_b: "The restaurant is closed on Mondays.",
@@ -249,7 +249,7 @@ const I18N = {
     rules_footer: "The management reserves the right to refuse entry in case these rules are not respected.\n\nWith respect,\nThe Bahçe Family",
 
     music_title: "Live music",
-    music_sub: "Daily from 21:00 to 23:00",
+    music_sub: "Daily from 20:00 to 23:00",
     music_btn: "Performance schedule",
     music_event_label: "Upcoming event",
     music_event_title: "This week",
@@ -277,7 +277,7 @@ const I18N = {
     footer_hours: "Tuesday–Sunday: 10:00 — last guest (Monday closed)",
 
     schedule_title: "Live music schedule",
-    schedule_sub: "Daily 21:00–23:00",
+    schedule_sub: "Daily 20:00–23:00",
 
     booking_title: "Table reservation",
     booking_sub: "Your booking will be processed shortly.",
