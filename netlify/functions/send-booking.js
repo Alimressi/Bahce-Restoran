@@ -4,6 +4,13 @@ function buildMessage(data){
     return s ? s : "-";
   };
 
+  const formatDate = (v)=>{
+    const s = String(v ?? "").trim();
+    const m = s.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if(m) return `${m[3]}.${m[2]}.${m[1]}`;
+    return s ? s : "-";
+  };
+
   const normalizeLang = (v)=>{
     const s = String(v ?? "").trim().toLowerCase();
     if(s === "az") return "AZ";
@@ -15,7 +22,8 @@ function buildMessage(data){
   const lines = [
     "📌 Yeni masa bronu",
     `🌐 Dil: ${normalizeLang(data.lang)}`,
-    `📅 Tarix: ${safe(data.date)}`,
+    `👤 Ad: ${safe(data.name)}`,
+    `📅 Tarix: ${formatDate(data.date)}`,
     `⏰ Saat: ${safe(data.time)}`,
     `👥 Qonaq sayı: ${safe(data.guests)}`,
     `📞 Telefon: ${safe(data.phone)}`,
