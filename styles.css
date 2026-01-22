@@ -120,6 +120,15 @@ a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit}
 input,select,textarea{accent-color:var(--c-accent)}
 
+ #location .section-sub a{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+ }
+
+ #location .section-sub a:hover{
+  text-decoration-thickness: 2px;
+ }
+
 svg{display:block}
 
 .container{max-width:var(--container);margin:0 auto;padding:0 18px}
