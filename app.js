@@ -57,7 +57,7 @@ const I18N = {
     menu_subline: "Zərif dadlar, imza kokteyllər və gecəyə uyğun atmosfer.",
     menu_text1: "Menyumuzda türk mətbəxinin seçilmiş klassikləri, xüsusi qəlyan menyusu və imza içkilər var.",
     menu_text2: "Ailəniz və dostlarınızla rahat şam yeməyi, ad günü və ya xüsusi gecələr üçün ideal atmosfer.",
-    menu_text: "Zərif dadlar, imza kokteyllər və gecəyə uyğun atmosfer. Menyumuzda türk mətbəxinin seçilmiş klassikləri, xüsusi qəlyan menyusu və imza içkilər var.",
+    menu_text: "Мы предлагаем широкий выбор блюд турецкой кухни, приготовленных по традиционным рецептам, а также разнообразные напитки на любой вкус. Меню объединяет классику и современные интерпретации, чтобы каждый гость смог найти для себя идеальное сочетание.",
     menu_open: "Menyunu aç",
 
     contacts_title: "Əlaqə",
@@ -158,7 +158,7 @@ const I18N = {
     menu_subline: "Изысканные блюда, авторские напитки и атмосфера вечера.",
     menu_text1: "В меню — лучшие блюда турецкой кухни, отдельное меню кальяна и фирменные напитки.",
     menu_text2: "Идеальная атмосфера для ужина с близкими, дня рождения или особенного вечера.",
-    menu_text: "Изысканные блюда, авторские напитки и атмосфера вечера. В меню — лучшие блюда турецкой кухни, отдельное меню кальяна и фирменные напитки.",
+    menu_text: "Мы предлагаем широкий выбор блюд турецкой кухни, приготовленных по традиционным рецептам, а также разнообразные напитки на любой вкус. Меню объединяет классику и современные интерпретации, чтобы каждый гость смог найти для себя идеальное сочетание.",
     menu_open: "Открыть меню",
 
     contacts_title: "Контакты",
@@ -259,7 +259,7 @@ const I18N = {
     menu_subline: "Signature flavors, crafted drinks, and an elegant evening mood.",
     menu_text1: "Our menu includes selected Turkish classics, a dedicated shisha menu, and signature drinks.",
     menu_text2: "A perfect atmosphere for dinner with friends, birthdays, and special evenings.",
-    menu_text: "Signature flavors, crafted drinks, and an elegant evening mood. Our menu includes selected Turkish classics, a dedicated shisha menu, and signature drinks.",
+    menu_text: "Мы предлагаем широкий выбор блюд турецкой кухни, приготовленных по традиционным рецептам, а также разнообразные напитки на любой вкус. Меню объединяет классику и современные интерпретации, чтобы каждый гость смог найти для себя идеальное сочетание.",
     menu_open: "Open menu",
 
     contacts_title: "Contacts",
