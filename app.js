@@ -69,7 +69,7 @@ const I18N = {
     contact_call: "Zəng et",
 
     location_title: "Ünvan",
-    location_sub: "Zarifa Aliyeva 93 ул.",
+    location_sub: "Zərifə Əliyeva 93 küç.",
 
     footer_hours: "Çərşənbə axşamı–Bazar: 10:00 — son müştəri (Bazar ertəsi bağlıdır)",
 
@@ -168,7 +168,7 @@ const I18N = {
     contact_ig: "Instagram",
     contact_call: "Позвонить",
 
-    location_title: "Ünvan",
+    location_title: "Локация",
     location_sub: "Zarifa Aliyeva 93 ул.",
 
     footer_hours: "Вторник–Воскресенье: 10:00 — последний гость (Понедельник выходной)",
@@ -268,8 +268,8 @@ const I18N = {
     contact_ig: "Instagram",
     contact_call: "Call",
 
-    location_title: "Ünvan",
-    location_sub: "Zarifa Aliyeva 93 ул.",
+    location_title: "Location",
+    location_sub: "Zarifa Aliyeva St. 93",
 
     footer_hours: "Tuesday–Sunday: 10:00 — last guest (Monday closed)",
 
