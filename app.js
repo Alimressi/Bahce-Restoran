@@ -4,7 +4,7 @@ const I18N = {
     nav_music: "Canlı musiqi",
     nav_menu: "Menyu",
     nav_contacts: "Əlaqə",
-    nav_location: "Lokasiya",
+    nav_location: "Ünvan",
     nav_rules: "Qaydalar",
 
     hero_title: "Bahçe Restoran",
@@ -48,16 +48,15 @@ const I18N = {
 
     music_title: "Canlı musiqi",
     music_sub: "Hər gün 20:00-dan 23:00-a qədər",
-    music_btn: "Çıxış cədvəli",
     music_event_label: "Yaxın tədbir",
     music_event_title: "Bu həftə",
     music_event_note: "Şəkli dəyişmək üçün: /assets/live-event.jpg",
 
     menu_title: "Menyu",
-    menu_subline: "Мы предлагаем широкий выбор блюд турецкой кухни, приготовленных по традиционным рецептам, а также разнообразные напитки на любой вкус. Меню объединяет классику и современные интерпретации, чтобы каждый гость смог найти для себя идеальное сочетание.",
-    menu_text1: "Мы предлагаем широкий выбор блюд турецкой кухни, приготовленных по традиционным рецептам, а также разнообразные напитки на любой вкус. Меню объединяет классику и современные интерпретации, чтобы каждый гость смог найти для себя идеальное сочетание.",
-    menu_text2: "Мы предлагаем широкий выбор блюд турецкой кухни, приготовленных по традиционным рецептам, а также разнообразные напитки на любой вкус. Меню объединяет классику и современные интерпретации, чтобы каждый гость смог найти для себя идеальное сочетание.",
-    menu_text: "Мы предлагаем широкий выбор блюд турецкой кухни, приготовленных по традиционным рецептам, а также разнообразные напитки на любой вкус. Меню объединяет классику и современные интерпретации, чтобы каждый гость смог найти для себя идеальное сочетание.",
+    menu_subline: "Biz ənənəvi reseptlərə əsasən hazırlanmış türk mətbəxinin geniş seçimlərini, eləcə də hər zövqə uyğun müxtəlif içkilər təklif edirik. Menyumuz klassikanı və müasir interpretasiyaları birləşdirir ki, hər bir qonaq özü üçün ideal uyğunluğu tapsın.",
+    menu_text1: "Biz ənənəvi reseptlərə əsasən hazırlanmış türk mətbəxinin geniş seçimlərini, eləcə də hər zövqə uyğun müxtəlif içkilər təklif edirik. Menyumuz klassikanı və müasir interpretasiyaları birləşdirir ki, hər bir qonaq özü üçün ideal uyğunluğu tapsın.",
+    menu_text2: "Biz ənənəvi reseptlərə əsasən hazırlanmış türk mətbəxinin geniş seçimlərini, eləcə də hər zövqə uyğun müxtəlif içkilər təklif edirik. Menyumuz klassikanı və müasir interpretasiyaları birləşdirir ki, hər bir qonaq özü üçün ideal uyğunluğu tapsın.",
+    menu_text: "Biz ənənəvi reseptlərə əsasən hazırlanmış türk mətbəxinin geniş seçimlərini, eləcə də hər zövqə uyğun müxtəlif içkilər təklif edirik. Menyumuz klassikanı və müasir interpretasiyaları birləşdirir ki, hər bir qonaq özü üçün ideal uyğunluğu tapsın.",
     menu_open: "Menyunu aç",
 
     contacts_title: "Əlaqə",
@@ -69,8 +68,8 @@ const I18N = {
     contact_ig: "Instagram",
     contact_call: "Zəng et",
 
-    location_title: "Lokasiya",
-    location_sub: "Google Maps-də bax",
+    location_title: "Ünvan",
+    location_sub: "Zarifa Aliyeva 93 ул.",
 
     footer_hours: "Çərşənbə axşamı–Bazar: 10:00 — son müştəri (Bazar ertəsi bağlıdır)",
 
@@ -149,7 +148,6 @@ const I18N = {
 
     music_title: "Живая музыка",
     music_sub: "Каждый день с 20:00 до 23:00",
-    music_btn: "Расписание выступлений",
     music_event_label: "Ближайшее событие",
     music_event_title: "На этой неделе",
     music_event_note: "Чтобы обновлять фото: /assets/live-event.jpg",
@@ -170,8 +168,8 @@ const I18N = {
     contact_ig: "Instagram",
     contact_call: "Позвонить",
 
-    location_title: "Локация",
-    location_sub: "Посмотреть в Google Maps",
+    location_title: "Ünvan",
+    location_sub: "Zarifa Aliyeva 93 ул.",
 
     footer_hours: "Вторник–Воскресенье: 10:00 — последний гость (Понедельник выходной)",
 
@@ -250,7 +248,6 @@ const I18N = {
 
     music_title: "Live music",
     music_sub: "Daily from 20:00 to 23:00",
-    music_btn: "Performance schedule",
     music_event_label: "Upcoming event",
     music_event_title: "This week",
     music_event_note: "To update the photo: /assets/live-event.jpg",
@@ -271,8 +268,8 @@ const I18N = {
     contact_ig: "Instagram",
     contact_call: "Call",
 
-    location_title: "Location",
-    location_sub: "View on Google Maps",
+    location_title: "Ünvan",
+    location_sub: "Zarifa Aliyeva 93 ул.",
 
     footer_hours: "Tuesday–Sunday: 10:00 — last guest (Monday closed)",
 
