@@ -2,23 +2,17 @@ const ARTISTS = [
   {
     date: "2026-01-18",
     time: "20:00–23:00",
-    name: "Bahçe Live Band",
-    photo:
-      "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1400&q=70"
+    name: "Bahçe Live Band"
   },
   {
     date: "2026-01-19",
     time: "20:00–23:00",
-    name: "DJ Night — Turkish Classics",
-    photo:
-      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1400&q=70"
+    name: "DJ Night — Turkish Classics"
   },
   {
     date: "2026-01-20",
     time: "20:00–23:00",
-    name: "Acoustic Session",
-    photo:
-      "https://images.unsplash.com/photo-1521337706264-a414f153a5ea?auto=format&fit=crop&w=1400&q=70"
+    name: "Acoustic Session"
   }
 ];
 
@@ -45,9 +39,7 @@ function renderArtists(){
     const media = document.createElement("div");
     media.className = "artist-media";
     media.style.background =
-      "linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.35)), radial-gradient(650px 320px at 25% 20%, rgba(201,162,77,.18), transparent 55%), url('" +
-      a.photo +
-      "') center/cover no-repeat";
+      "linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.35)), radial-gradient(650px 320px at 25% 20%, rgba(201,162,77,.18), transparent 55%)";
 
     const body = document.createElement("div");
     body.className = "artist-body";

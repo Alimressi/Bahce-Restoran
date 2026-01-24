@@ -64,6 +64,7 @@ const I18N = {
     ig_label: "Instagram",
     wa_label: "WhatsApp",
     contact_sub: "Sizin üçün uyğun olan üsulla bizimlə əlaqə saxlayın — telefonla və ya messencerlərdə.",
+    contact_phone: "Telefon",
     contact_wa: "WhatsApp",
     contact_ig: "Instagram",
     contact_call: "Zəng et",
@@ -71,7 +72,7 @@ const I18N = {
     location_title: "Ünvan",
     location_sub: "Zərifə Əliyeva 93 küç.",
 
-    footer_hours: "Çərşənbə axşamı–Bazar: 10:00 — son müştəri (Bazar ertəsi bağlıdır)",
+    footer_hours: "Çərşənbə axşamı–Bazar: 10:00 — son müştəriyədək (Bazar ertəsi bağlıdır)",
 
     schedule_title: "Canlı musiqi proqramı",
     schedule_sub: "Hər gün 20:00–23:00",
@@ -164,6 +165,7 @@ const I18N = {
     ig_label: "Instagram",
     wa_label: "WhatsApp",
     contact_sub: "Свяжитесь с нами удобным для вас способом — по телефону или в мессенджерах.",
+    contact_phone: "Телефон",
     contact_wa: "WhatsApp",
     contact_ig: "Instagram",
     contact_call: "Позвонить",
@@ -171,7 +173,7 @@ const I18N = {
     location_title: "Локация",
     location_sub: "Zarifa Aliyeva 93 ул.",
 
-    footer_hours: "Вторник–Воскресенье: 10:00 — последний гость (Понедельник выходной)",
+    footer_hours: "Вторник–Воскресенье: 10:00 до последнего гостя (Понедельник выходной)",
 
     schedule_title: "Расписание живой музыки",
     schedule_sub: "Каждый день 20:00–23:00",
@@ -264,6 +266,7 @@ const I18N = {
     ig_label: "Instagram",
     wa_label: "WhatsApp",
     contact_sub: "Contact us in any convenient way — by phone or in messengers.",
+    contact_phone: "Phone",
     contact_wa: "WhatsApp",
     contact_ig: "Instagram",
     contact_call: "Call",
@@ -271,7 +274,7 @@ const I18N = {
     location_title: "Location",
     location_sub: "Zarifa Aliyeva St. 93",
 
-    footer_hours: "Tuesday–Sunday: 10:00 — last guest (Monday closed)",
+    footer_hours: "Tuesday–Sunday: 10:00 till the last guest (Monday closed)",
 
     schedule_title: "Live music schedule",
     schedule_sub: "Daily 20:00–23:00",
