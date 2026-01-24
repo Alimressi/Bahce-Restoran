@@ -748,15 +748,15 @@ svg{display:block}
 .contact-phone-btn:hover{border-color:rgba(28,28,28,.42)}
 .contact-sub{margin-top:10px;color:var(--c-text-2)}
 .contact-actions{display:flex;gap:10px;flex-direction:column;justify-content:center;align-items:center;margin-top:22px}
-.contact-actions .btn{width:clamp(260px, 80vw, 360px);min-height:46px;padding:10px 14px;justify-content:center;border-radius:16px}
+.contact-actions .btn{width:clamp(260px, 80vw, 360px);min-height:46px;padding:10px 14px 10px 60px;justify-content:center;border-radius:16px}
 .contact-actions .btn .btn-label{white-space:nowrap}
 
-.contact-actions .btn.with-icon{justify-content:flex-start}
+.contact-actions .btn.with-icon{justify-content:center}
 .contact-actions .btn.with-icon .btn-label{flex:unset;text-align:left}
 
 .contact-actions .btn.with-icon{
   display:grid;
-  grid-template-columns:34px max-content;
+  grid-template-columns:34px 120px;
   column-gap:12px;
   justify-content:center;
   justify-items:start;

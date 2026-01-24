@@ -79,12 +79,16 @@ function initPickers(form){
   const dateInput = form.querySelector("input[name='date']");
   if(dateInput){
     dateInput.setAttribute("readonly", "readonly");
-    window.flatpickr(dateInput, {
+    const fp = window.flatpickr(dateInput, {
       dateFormat: "Y-m-d",
       altInput: true,
       altFormat: "d.m.Y",
       allowInput: false
     });
+
+    if(fp && fp.altInput){
+      fp.altInput.placeholder = "";
+    }
   }
 }
 
