@@ -72,6 +72,8 @@ const I18N = {
     location_title: "Ünvan",
     location_sub: "Zərifə Əliyeva 93 küç.",
 
+    waze_cta: "Bizi Waze-də tap",
+
     footer_hours: "Çərşənbə axşamı–Bazar: 10:00 — son müştəriyədək (Bazar ertəsi bağlıdır)",
 
     schedule_title: "Canlı musiqi proqramı",
@@ -173,6 +175,8 @@ const I18N = {
     location_title: "Локация",
     location_sub: "Zarifa Aliyeva 93 ул.",
 
+    waze_cta: "Найдите нас в Waze",
+
     footer_hours: "Вторник–Воскресенье: 10:00 до последнего гостя (Понедельник выходной)",
 
     schedule_title: "Расписание живой музыки",
@@ -273,6 +277,8 @@ const I18N = {
 
     location_title: "Location",
     location_sub: "Zarifa Aliyeva St. 93",
+
+    waze_cta: "Find us in Waze",
 
     footer_hours: "Tuesday–Sunday: 10:00 till the last guest (Monday closed)",
 

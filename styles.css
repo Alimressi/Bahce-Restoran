@@ -401,6 +401,12 @@ svg{display:block}
   margin-bottom:auto;
  }
 
+ #menu .menu-actions .btn{
+  width:clamp(170px, 52vw, 240px);
+  min-height:46px;
+  padding:10px 14px;
+ }
+
 @media (max-width: 640px){
   .menu-actions{
     margin-top:26px;
@@ -766,8 +772,8 @@ svg{display:block}
 .location-actions .btn{width:clamp(170px, 52vw, 240px)}
 
 .location-actions{
-  margin-top:18px;
-  margin-bottom:18px;
+  margin-top:48px;
+  margin-bottom:32px;
 }
 
 .footer .icon-link{
