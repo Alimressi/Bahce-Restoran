@@ -574,6 +574,22 @@ svg{display:block}
 .booking-page .flatpickr-input{
   text-align:left !important;
 }
+.booking-page .flatpickr-mobile{
+  text-align:left !important;
+}
+.booking-page input[name="date"],
+.booking-page input[type="date"]{
+  text-align:left !important;
+}
+.booking-page input[type="date"]::-webkit-date-and-time-value{
+  text-align:left;
+}
+.booking-page input[type="date"]::-webkit-datetime-edit{
+  text-align:left;
+}
+.booking-page input[type="date"]::-webkit-datetime-edit-fields-wrapper{
+  justify-content:flex-start;
+}
 .select{
   -webkit-appearance:none;
   appearance:none;
