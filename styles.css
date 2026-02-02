@@ -833,6 +833,9 @@ svg{display:block}
 }
 .booking-page .label{color:#534D37;font-size:16px}
 .booking-page .deposit-note{color:var(--c-text-2);font-style:italic}
+ .booking-page .form .btn-row{
+  margin-top:18px;
+ }
 
 .rules-card{padding:22px}
 .rules-list{display:grid;gap:14px;text-align:left}
