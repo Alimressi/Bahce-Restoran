@@ -571,6 +571,9 @@ svg{display:block}
   line-height:1.2;
   min-height:46px;
 }
+.booking-page .flatpickr-input{
+  text-align:left !important;
+}
 .select{
   -webkit-appearance:none;
   appearance:none;

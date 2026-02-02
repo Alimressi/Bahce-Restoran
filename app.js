@@ -259,10 +259,10 @@ const I18N = {
     music_event_note: "To update the photo: /assets/live-event.jpg",
 
     menu_title: "Menu",
-    menu_subline: "Мы предлагаем широкий выбор блюд турецкой кухни, приготовленных по традиционным рецептам, а также разнообразные напитки на любой вкус. Меню объединяет классику и современные интерпретации, чтобы каждый гость смог найти для себя идеальное сочетание.",
-    menu_text1: "Мы предлагаем широкий выбор блюд турецкой кухни, приготовленных по традиционным рецептам, а также разнообразные напитки на любой вкус. Меню объединяет классику и современные интерпретации, чтобы каждый гость смог найти для себя идеальное сочетание.",
-    menu_text2: "Мы предлагаем широкий выбор блюд турецкой кухни, приготовленных по традиционным рецептам, а также разнообразные напитки на любой вкус. Меню объединяет классику и современные интерпретации, чтобы каждый гость смог найти для себя идеальное сочетание.",
-    menu_text: "Мы предлагаем широкий выбор блюд турецкой кухни, приготовленных по традиционным рецептам, а также разнообразные напитки на любой вкус. Меню объединяет классику и современные интерпретации, чтобы каждый гость смог найти для себя идеальное сочетание.",
+    menu_subline: "We offer a wide selection of Turkish dishes made with traditional recipes, as well as a variety of drinks for every taste. Our menu combines classics and modern interpretations so every guest can find the perfect match.",
+    menu_text1: "We offer a wide selection of Turkish dishes made with traditional recipes, as well as a variety of drinks for every taste. Our menu combines classics and modern interpretations so every guest can find the perfect match.",
+    menu_text2: "We offer a wide selection of Turkish dishes made with traditional recipes, as well as a variety of drinks for every taste. Our menu combines classics and modern interpretations so every guest can find the perfect match.",
+    menu_text: "We offer a wide selection of Turkish dishes made with traditional recipes, as well as a variety of drinks for every taste. Our menu combines classics and modern interpretations so every guest can find the perfect match.",
     menu_open: "Open menu",
 
     contacts_title: "Contacts",
