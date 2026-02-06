@@ -789,6 +789,9 @@ svg{display:block}
 .contact-actions .btn.with-icon .btn-icon{justify-self:center}
 
 .location-actions .btn{width:clamp(170px, 52vw, 240px)}
+@media (max-width: 420px){
+  html[lang="ru"] .location-actions .btn{width:clamp(170px, 66vw, 280px)}
+}
 
 .location-actions{
   margin-top:48px;
